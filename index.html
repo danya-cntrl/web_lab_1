@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа №1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Чечель Даниил Алексеевич</h1>
+        <p>Группа: P3214</p>
+        <p>Вариант: 501894</p>
+    </header>
+
+    <main>
+        <section class="graph">
+            <h2>График</h2>
+            <canvas id="plane" width="600" height="600">
+            </canvas>
+        </section>
+
+        <section class="input">
+            <h3>Ввод данных</h3>
+            <form id="dataForm">
+                <fieldset>
+                    <legend>Переменная X</legend>
+                    <label><input type="radio" name="x" value="-5" required> -5</label>
+                    <label><input type="radio" name="x" value="-4"> -4</label>
+                    <label><input type="radio" name="x" value="-3"> -3</label>
+                    <label><input type="radio" name="x" value="-2"> -2</label>
+                    <label><input type="radio" name="x" value="-1"> -1</label>
+                    <label><input type="radio" name="x" value="0"> 0</label>
+                    <label><input type="radio" name="x" value="1"> 1</label>
+                    <label><input type="radio" name="x" value="2"> 2</label>
+                    <label><input type="radio" name="x" value="3"> 3</label>
+                </fieldset>
+                <label for="y">Переменная Y (-3 ... 3)</label>
+                <input type="text" id="y" name="y" pattern="-?\d+(\.\d+)?"> 
+                
+                <label for="r">Переменная R (2 ... 5)</label>
+                <input type="text" id="r" pattern="-?\d+(\.\d+)?"> 
+
+                <button type="submit">Проверка</button>
+            </form>
+        </section>
+
+        <section class="results">
+            <h3>Результат</h3>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>R</th>
+                        <th>Результат</th>
+                        <th>Дата и время</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
